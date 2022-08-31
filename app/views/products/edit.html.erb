@@ -1,0 +1,7 @@
+<h1>Detalle Producto </h1>
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name, label: 'Nombre Producto' %>
+  <%= f.input :description %>
+  <%= f.input :price %>
+  <%= f.submit 'Guardar'%>
+<% end %>
