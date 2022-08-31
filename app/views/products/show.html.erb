@@ -1,0 +1,20 @@
+<h1>Detalle Producto</h1>
+<table>
+  <tr>
+    <thead>
+      <td><h3>Nombre</h3></td>
+      <td><h3>Descripcion</h3></td>
+      <td><h3>Valor</h3></td>
+      <td><h3>Fecha Actualizacion</h3></td>
+    </thead>
+  </tr>
+  <tr>
+    <td><%= @product.name %></td>
+    <td><%= @product.description %></td>
+    <td><%= @product.price %></td>
+    <td><%= @product.updated_at %></td>
+    <td>
+      <%= link_to 'Volver', products_path %>
+    </td>
+  <tr>
+</table>
