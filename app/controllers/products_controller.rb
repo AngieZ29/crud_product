@@ -1,7 +1,20 @@
 class ProductsController < ApplicationController
-  before_action :get_product, only: [:show, :edit, :update]
+  before_action :get_product, only: [:show, :edit, :update, :delete]
   def index
     @products = Product.all
+  end
+
+  def new
+    @product = Product.new
+  end
+
+  def create
+    @product = Product.new(val_params)
+    if @product.save
+      redirect_to products_path
+    else
+      render :new
+    end
   end
 
   def show
